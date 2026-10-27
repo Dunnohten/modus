@@ -14,6 +14,7 @@ What was done, what went wrong, and what was verified. Newest entries go at the 
 | 6 | Checked six other agent systems (Hermes Agent, OpenClaw, Mercury, DeepSeek Harness, Octopus OS, Sentient OS) against their source code, or the installed app for two | No document in the six describes absolute typed-yes stops or one approval tied to an exact plan | Docs and code read, none run. DeepSeek's sandbox behavior and OpenClaw's marketplace figures are secondhand |
 | 7 | Named the combined agent Modus and wrote the six-phase roadmap | [ROADMAP.md](ROADMAP.md) | Design only |
 | 8 | Found that the owner's EDH checkout is nine commits ahead of the copy audited in entry 2, including macOS identity work | The test baseline in entry 3 is stale and must be redone in Phase 0 | Seen in the commit list; not yet re-tested |
+| 9 | Re-ran the EDH suite on the owner's current checkout (commit 76360d4), on Linux with Python 3.12 | 760 tests ran, 1 failed: `test_probing_stops_when_the_cycle_budget_is_spent` in `test_birth.py`. The test's fake program reports "No manual entry", so it looks environment-specific | One run on Linux, not on the Mac. A separate report of 839 passing tests on EDH's newest branch is unconfirmed here, and the counts differ, so the branch needs to be named |
 
 ## Corrections
 
