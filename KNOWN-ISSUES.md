@@ -7,12 +7,16 @@ What is wrong or unconfirmed right now, with what is known and what is not. Date
 **Known**
 - The branch ran 971 tests with 135 failures.
 - 81 are in `test_gh_delete`. It fails the same way at every commit that has it, since its first commit, 5238784.
-- 26 are in `test_host_automation` and 13 are in `test_gh_destructive`.
-- About 12 other failures also occur on main.
+- 26 are in `test_host_automation` and 13 are in `test_gh_destructive`. That makes 120 in the gh and host-automation modules.
+- 13 more also fail on `origin/main`: `test_birth` 3, `test_durability` 2, `test_subscription_providers` 2, and one each in `test_tui`, `test_skills`, `test_safety`, `test_permissions`, `test_foundry` and `test_boot`.
+- 2 are in `test_unreadable_shell`. They expect `/proc` wording that macOS does not produce.
+- 120 + 13 + 2 = 135.
+- `test_workers_branching` fails on main only, so it is not in the 135.
+- This breakdown is taken from the owner's Mac run report. We have not seen the run ourselves.
 
 **Not known**
 - Whether the gh failures come from the code or the environment.
-- The three files above add up to 120 of the 135. The remaining failures are not itemised here, and they are not reconciled with the 12 on main.
+- Whether the 2 `test_unreadable_shell` failures are the only environment-specific ones beyond the gh modules.
 
 ## 2. A test that is not hermetic
 
