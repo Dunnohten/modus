@@ -11,7 +11,7 @@ Re-run the full EDH test suite on the current code for a real baseline, and expl
 - [ ] The test baseline is recorded, and any failure is explained and tracked
 - [ ] A license is chosen and present in every repo
 - [ ] The import-boundary test passes
-- [ ] The decisions blocking Phase 1 are answered
+- [x] The decisions blocking Phase 1 are answered (D-A to D-D, decided 2026-10-27; see [DECISIONS.md](DECISIONS.md))
 - [ ] Milestone report published
 
 ## Phase 1: approval layer
