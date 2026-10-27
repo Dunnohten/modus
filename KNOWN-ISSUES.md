@@ -2,9 +2,10 @@
 
 What is wrong or unconfirmed right now, with what is known and what is not. Dated 2026-10-27. Entries leave this list when they are fixed or confirmed, with the evidence linked in [BUILD-LOG.md](BUILD-LOG.md).
 
-## 1. 135 test failures on `origin/blocked-capability`
+## 1. 135 test failures on `blocked-capability`
 
 **Known**
+- `blocked-capability` is an unpublished branch from the owner's helper computer. It is not on GitHub.
 - The branch ran 971 tests with 135 failures.
 - 81 are in `test_gh_delete`. It fails the same way at every commit that has it, since its first commit, 5238784.
 - 26 are in `test_host_automation` and 13 are in `test_gh_destructive`. That makes 120 in the gh and host-automation modules.
@@ -27,14 +28,17 @@ What is wrong or unconfirmed right now, with what is known and what is not. Date
 - Which test it is. The name is not recorded here.
 - Whether its result changes on a machine without that CLI.
 
-## 3. The reported 839 passing tests
+## 3. The reported 839 passing tests (explained)
 
 **Known**
-- A report of 839 passing tests on EDH's newest branch exists.
-- It matches neither run we have: 760 on the macOS identity branch, and 971 run with 135 failures on `blocked-capability`.
+- The figure comes from `armory/macos-approval-mode` on GitHub (8989100, 30 commits ahead of main, and it contains 76360d4).
+- That run was 839 tests, OK, 244 skipped, so 595 ran.
+- It did not match the 760 on `armory/macos-process-identity` or the 971 on `blocked-capability` because it is a different branch.
+- The branch list and counts were seen by the helper in a fresh clone, not by us.
 
 **Not known**
-- Where the figure came from, or which branch and commit it describes.
+- Whether the run was on the owner's Mac. That is inferred.
+- Why 244 tests were skipped here against 173 at 76360d4. It is not recorded.
 
 ## 4. `workflows retire` has no human-only guard
 
