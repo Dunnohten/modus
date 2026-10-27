@@ -41,7 +41,7 @@ In plain words: when several stops come up together, does each get its own yes?
 In plain words: can a person relax one of the hard stops, and how?
 
 - **Option 1: never.** Stops are fixed in code. Costs a code change and a release when a stop is wrong for a real case, and people may work around it.
-- **Option 2: yes, only on a terminal with a typed phrase, and logged.** Risks an agent typing the phrase itself if it shares that terminal. The log detects a loosening afterwards but does not prevent it. EDH already refuses its existing user decisions when they are requested from inside an agent shell. Extending that refusal to loosening a stop is Phase 1 work and is not yet built or tested.
+- **Option 2: yes, only on a terminal with a typed phrase, and logged.** Risks an agent typing the phrase itself if it shares that terminal. The log detects a loosening afterwards but does not prevent it. EDH already refuses its existing user decisions when they are requested from inside an agent shell (one command, `workflows retire`, is not yet covered; see [KNOWN-ISSUES.md](KNOWN-ISSUES.md)). Extending that refusal to loosening a stop is Phase 1 work and is not yet built or tested.
 - **Option 3: yes, by editing the config file.** Easiest. Risks the agent editing its own limits, which defeats protected, human-edit-only config.
 - **Recommendation: Yes, only on a terminal with a typed phrase, logged.**
 
