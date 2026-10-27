@@ -39,4 +39,4 @@ Nothing is called proven before its gate passes.
 
 ## License
 
-MIT, matching Everyday Harness. See [LICENSE](LICENSE). The choice is listed in [DECISIONS.md](DECISIONS.md) until the owner confirms it.
+MIT. See [LICENSE](LICENSE).
