@@ -15,9 +15,21 @@ What is wrong or unconfirmed right now, with what is known and what is not. Date
 - `test_workers_branching` fails on main only, so it is not in the 135.
 - This breakdown is taken from the owner's Mac run report. We have not seen the run ourselves.
 
+**Cause (seen by the EDH session on the owner's Mac, Python 3.15.0; not seen by us)**
+- On macOS `/var` is a symlink, so a test's temporary workspace looked like it was outside the workspace, and read-only commands asked for approval.
+- 125 of the 135 pass with a short, symlink-free `TMPDIR`. An earlier count of 127 was wrong; 125 is right.
+- The fix is commit e9b8ae9, on `armory/macos-process-identity`. It is absent from `blocked-capability`.
+- Ten remain:
+  - 2 real-kill tests. macOS has no subreaper, and the code refuses on purpose.
+  - 2 in `test_unreadable_shell`. They expect `/proc` wording that macOS does not produce.
+  - 2 in `test_subscription_providers`. They reach the real Gemini CLI.
+  - 1 curl test. Curl 8.7.1 formats its help differently, and the test's parser is too narrow. The code looks right.
+  - 3 untraced: the `test_birth` cycle-budget probe, the `test_boot` GPU list (it shows an extra "Apple Silicon" entry), and a `test_tui` search marker. All three pass at 76360d4.
+
 **Not known**
-- Whether the gh failures come from the code or the environment.
-- Whether the 2 `test_unreadable_shell` failures are the only environment-specific ones beyond the gh modules.
+- Why the 3 untraced failures fail on `blocked-capability` but pass at 76360d4.
+- Whether the curl test's parser or the code is at fault. The code only looks right.
+- Whether the two lists of 10 and 135 line up test for test. The module counts above predate the cause trace and are not re-mapped.
 
 ## 2. A test that is not hermetic
 
