@@ -4,8 +4,6 @@ The recommendation column is a proposal, not a decision. Decisions are recorded 
 
 | Decision | Question | Recommendation | Blocks |
 | --- | --- | --- | --- |
-| Build order | Approval layer, then scheduler plus one chat channel, then container backend, then Memory? | Yes | All phases |
-| D-E | Extract Enclave as its own package now? | No; define the interface inside EDH and extract when a second user exists | Phase 0 |
 | D-A | Is a push to your own feature branch "publishing"? | No for a private branch; yes for a PR on a shared repo, a tag or a release | Phase 1 |
 | D-B | Where does the official wording of the stops live? | Generate the config from the pinned text in Bunker Protocol | Phase 1 |
 | D-C | One typed yes per stop, or one over a listed batch? | Per stop; "yes all N" only with all N on screen | Phase 1 |
@@ -15,4 +13,6 @@ The recommendation column is a proposal, not a decision. Decisions are recorded 
 
 ## Decided
 
+- **Build order, decided 2026-10-27** (the General): approval layer, then scheduler plus one chat channel, then container backend, then memory.
+- **D-E: no, decided 2026-10-27** (the General). Define the Enclave interface inside EDH, and extract Enclave as its own package when a second user exists.
 - **License: MIT, decided 2026-10-27** (the General). Applies to the front repo; EDH is already MIT.
