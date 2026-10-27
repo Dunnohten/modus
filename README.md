@@ -36,6 +36,7 @@ Nothing is called proven before its gate passes.
 - [ROADMAP.md](ROADMAP.md): six phases, each ending in a pass/fail gate, with checkboxes.
 - [DECISIONS.md](DECISIONS.md): what is still undecided and who decides.
 - [BUILD-LOG.md](BUILD-LOG.md): what was done, what went wrong, what was verified and what was not.
+- [reports/](reports/): a milestone report at the close of each phase.
 
 ## License
 

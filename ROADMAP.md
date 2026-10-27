@@ -2,7 +2,7 @@
 
 Six phases. Each ends in a pass/fail gate, and a phase counts as done only when its gate passes. There are no dates; dates are added only when the owner sets them. The order is proposed until the owner confirms it.
 
-Every phase ends with a milestone report covering what was done, issues faced and how they were fixed, and what it means for Modus. Reports are linked here when a phase closes.
+Every phase ends with a milestone report covering what was done, issues faced and how they were fixed, and what it means for Modus. Reports are linked here when a phase closes. They live in [reports/](reports/) and are named `phase-N.md`, starting from [reports/TEMPLATE.md](reports/TEMPLATE.md).
 
 ## Phase 0: baseline and decisions
 
