@@ -50,3 +50,12 @@ Pass. All five Phase 0 boxes are ticked in ROADMAP.md: baseline recorded, licens
 
 - Made: build order, license (MIT), D-E (no extraction yet), D-A to D-D.
 - Open: D-F (Phase 2), D-M2 (Phase 4), the four early commits with trailers, which line is the base to merge into, and whether to fix the one non-hermetic test before Phase 1.
+
+## Update, 2026-10-27
+
+The report above is left as closed. These facts correct parts of it.
+
+- `blocked-capability`, named in this report (once as `origin/blocked-capability`), is an unpublished branch from the owner's helper computer. It is not on GitHub. The Mac checkout's `origin` was a bundle file, so the `origin/` names came from that snapshot.
+- GitHub has four branches: `main` (c509833, Oct 24); `armory/macos-process-identity` (76360d4, 10 ahead of main); `armory/macos-approval-mode` (8989100, 30 ahead of main, containing 76360d4); and `harness2-integration` (old).
+- The reported 839 passing tests is explained. It is from `armory/macos-approval-mode`: 839 tests, OK, 244 skipped, so 595 ran. It did not match the other runs because it is a different branch.
+- Not verified: the branch list and counts were seen by the helper in a fresh clone, not by us. That the 839 run was on the owner's Mac is inferred.
