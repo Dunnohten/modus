@@ -10,7 +10,7 @@ Re-run the full EDH test suite on the current code for a real baseline, and expl
 
 - [x] The test baseline is recorded, and any failure is explained and tracked (baseline: 76360d4, 760 pass on the owner's Mac; other failures tracked in [KNOWN-ISSUES.md](KNOWN-ISSUES.md), 2026-10-27)
 - [ ] A license is chosen and present in every repo
-- [ ] The import-boundary test passes
+- [x] The import-boundary test passes (EDH commit edda771 on a local branch, 777 tests pass; not yet published, 2026-10-27)
 - [x] The decisions blocking Phase 1 are answered (D-A to D-D, decided 2026-10-27; see [DECISIONS.md](DECISIONS.md))
 - [ ] Milestone report published
 
