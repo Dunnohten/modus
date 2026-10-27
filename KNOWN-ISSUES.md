@@ -76,3 +76,14 @@ What is wrong or unconfirmed right now, with what is known and what is not. Date
 **Not known**
 - How GitHub lists contributors for the four commits.
 - How long the old commits stay reachable on GitHub if the history is rewritten.
+
+## 6. Merging the macOS fix into `blocked-capability` conflicts
+
+**Known** (seen by the EDH session on the owner's Mac, Python 3.15.0; not seen by us)
+- A real merge of e9b8ae9 into `blocked-capability` conflicts in 8 files: `daemon.py`, `permissions.py`, `_keeper.py`, `docs/unattended.md`, `test_birth.py`, `test_tui.py`, `test_durability.py` and `test_knowledge.py`.
+- The conflicts are not resolved.
+- The 839-test figure is explained in item 3: `armory/macos-approval-mode`, 244 skipped, 595 ran.
+
+**Not known**
+- How hard the 8 conflicts are to resolve.
+- Whether `armory/macos-approval-mode`, which contains 76360d4, is the better base than `blocked-capability`. That is a decision, and it is open.
