@@ -37,5 +37,4 @@ What was done, what went wrong, and what was verified. Newest entries go at the 
 - A claim about Mercury's pinned plugin checksums could not be confirmed in its source and was dropped.
 - The first rebase plan (entry 13) did nothing until `git fetch` restored the real `origin/main`. `git filter-branch --all` had also rewritten the local `origin/main` tracking ref, so it pointed at a rewritten commit, not at what GitHub held.
 - The Mac checkout's `origin` was a bundle file, not GitHub. Branch names written with `origin/` earlier, including `origin/blocked-capability`, came from that snapshot. `blocked-capability` is an unpublished branch from the owner's helper computer and is not on GitHub (entries 17 and 21).
-- An earlier count said 127 of the `blocked-capability` failures pass with a symlink-free `TMPDIR`. The right count is 125 (entry 22).
 - Entry 17, KNOWN-ISSUES.md and the Phase 0 report said the cause of the gh failures was unknown, code or environment. For 125 of the 135 the cause is now known: macOS `/var` is a symlink, which made the tests' temp workspace look outside the workspace (entry 22). Those older "cause unknown" lines are superseded.

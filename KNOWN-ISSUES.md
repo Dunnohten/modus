@@ -17,7 +17,7 @@ What is wrong or unconfirmed right now, with what is known and what is not. Date
 
 **Cause (seen by the EDH session on the owner's Mac, Python 3.15.0; not seen by us)**
 - On macOS `/var` is a symlink, so a test's temporary workspace looked like it was outside the workspace, and read-only commands asked for approval.
-- 125 of the 135 pass with a short, symlink-free `TMPDIR`. An earlier count of 127 was wrong; 125 is right.
+- 125 of the 135 pass with a short, symlink-free `TMPDIR`.
 - The fix is commit e9b8ae9, on `armory/macos-process-identity`. It is absent from `blocked-capability`.
 - Ten remain:
   - 2 real-kill tests. macOS has no subreaper, and the code refuses on purpose.
