@@ -5,7 +5,7 @@ Closed 2026-10-27.
 ## What was done
 
 - Published this repo (public, MIT) with the roadmap, decisions, build log and known issues.
-- Ran EDH's test suite on the owner's Mac at commit 76360d4: 760 tests, all OK, 173 skipped (Linux-only).
+- Ran EDH's test suite on the owner's Mac at commit 76360d4: 760 tests OK with 173 skipped (Linux-only), so 587 ran.
 - Compared EDH's branches and tested the second line of work, origin/blocked-capability: 971 tests, 135 failures.
 - Checked the code that stops an agent from making the owner's decisions (`_human_only`).
 - Recorded the decisions: build order, license, D-E, and D-A to D-D.
@@ -29,8 +29,8 @@ Closed 2026-10-27.
 
 ## Verified
 
-- 760 tests pass on the owner's Mac at 76360d4 (owner's terminal output).
-- The import-boundary test fails when a new bad import is added and passes when it is removed (three temporary edits, each reverted). The full suite ran 777 tests, all OK, 173 skipped.
+- 760 tests OK with 173 skipped (Linux-only), so 587 ran, on the owner's Mac at 76360d4 (owner's terminal output).
+- The import-boundary test fails when a new bad import is added and passes when it is removed (three temporary edits, each reverted). The full suite ran 777 tests OK with 173 skipped.
 - All three LICENSE files are MIT with holder Tyler Dunn. Bunker's change is commit 8f4898c, one line (owner's terminal output). This repo's LICENSE was compared with the SPDX MIT template.
 - Decisions are recorded in DECISIONS.md with their dates.
 
