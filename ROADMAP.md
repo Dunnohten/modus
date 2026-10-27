@@ -12,7 +12,7 @@ Re-run the full EDH test suite on the current code for a real baseline, and expl
 - [x] A license is chosen and present in every repo (MIT, holder Tyler Dunn: modus, EDH, Bunker Protocol at 8f4898c; 2026-10-27)
 - [x] The import-boundary test passes (EDH commit edda771 on a local branch, 777 tests pass; not yet published, 2026-10-27)
 - [x] The decisions blocking Phase 1 are answered (D-A to D-D, decided 2026-10-27; see [DECISIONS.md](DECISIONS.md))
-- [ ] Milestone report published
+- [x] Milestone report published (reports/phase-0.md)
 
 ## Phase 1: approval layer
 
