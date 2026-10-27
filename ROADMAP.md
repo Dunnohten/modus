@@ -8,7 +8,7 @@ Every phase ends with a milestone report covering what was done, issues faced an
 
 Re-run the full EDH test suite on the current code for a real baseline, and explain any failure. Pick one license. Add a module manifest and a test that blocks one part importing another's internals. Answer the open decisions that block Phase 1.
 
-- [ ] The test baseline is recorded, and any failure is explained and tracked
+- [x] The test baseline is recorded, and any failure is explained and tracked (baseline: 76360d4, 760 pass on the owner's Mac; other failures tracked in [KNOWN-ISSUES.md](KNOWN-ISSUES.md), 2026-10-27)
 - [ ] A license is chosen and present in every repo
 - [ ] The import-boundary test passes
 - [x] The decisions blocking Phase 1 are answered (D-A to D-D, decided 2026-10-27; see [DECISIONS.md](DECISIONS.md))
