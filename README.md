@@ -1,5 +1,7 @@
 # Modus
 
+![Modus terminal powering on](assets/modus-hero.gif)
+
 An agent you don't have to babysit. It runs on its own, stops only at a few hard lines that never move, and leaves receipts you can read afterward.
 
 **Status: planning.** Nothing in Modus has been proven yet. This repo is where the build happens in public: the plan, the gates each step must pass, the decisions still open, and a log of what was done and what went wrong.
